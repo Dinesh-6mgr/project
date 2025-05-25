@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>White Theme Sidebar Layout</title>
+  
+</head>
+<body style="background-color:beige;">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">EMBOCES</div>
+    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="user.php">   Grid 2081 </a></li>
+        <li><a href="user_calendar.php">calendar</a></li>
+         <li><a href="contact.html">Contact us</a></li>
+         <li><a href="login.php">admin </a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Main Content -->
+  <div class="hero">
+    <h1>WELCOME TO EMBOCES</h1>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to the White Theme Page</h1>
+    <p></p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2025 MyWebsite. All rights reserved.</p>
+  </div>
+</body>
+</html>
