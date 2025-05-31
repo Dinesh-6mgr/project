@@ -1,5 +1,7 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "dinesh rana magar");
+session_start();
+include "unset_session.php";
+include "dbconfig.php";
 
 $uploadDir = "uploads/";
 if (!file_exists($uploadDir)) {

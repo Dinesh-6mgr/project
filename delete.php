@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "dinesh rana magar");
+include "dbconfig.php";
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);

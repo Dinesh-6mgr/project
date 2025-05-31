@@ -1,5 +1,7 @@
 <?php
 session_start();
+include "unset_session.php";
+include "dbconfig.php";
 
 // Block access if not logged in
 
@@ -22,11 +24,7 @@ unset($_SESSION['allow_calendar']);
 
 
 
-// DB connection
-$conn = new mysqli("localhost", "root", "", "dinesh rana magar");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
 
 // Create photo folder if not exists
 $uploadDir = "photo/";

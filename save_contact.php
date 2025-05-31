@@ -1,3 +1,9 @@
+<?php
+include "dbconfig.php";
+session_start();
+include "unset_session.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +13,7 @@
 </head>
 <body>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "dinesh rana magar"; // your database name
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Get form values
 $fullname = $_POST['fullname'];

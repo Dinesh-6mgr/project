@@ -1,9 +1,7 @@
 <?php
-// DB connection
-$conn = new mysqli("localhost", "root", "", "dinesh rana magar");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
+include "includes/header.php";
+include "dbconfig.php";
 
 // Build month-to-image map
 $monthImageMap = [];
@@ -12,123 +10,7 @@ while ($row = $result->fetch_assoc()) {
     $monthImageMap[$row['month']] = $row['file_path'];
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="index.css">
-  <script src="index.js" defer></script>
-    <title>Calendar Viewer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #eef2f3;
-            padding: 0px;
-        }
 
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #444;
-            font-weight: bold;
-        }
-
-        .nav a:hover {
-            color: #007bff;
-        }
-
-        .filter-box {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .filter-box select {
-            padding: 8px;
-            width: 250px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        .calendar-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .calendar-image img {
-            max-width: 100%;
-            height: auto;
-            display: none;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px #aaa;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 0 10px #ccc;
-        }
-
-        table th, table td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        table th {
-            background: #2c3e50;
-            color: white;
-        }
-
-        table td a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        table td a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #f1f1f1;
-  text-align: center;
-  padding: 15px 10px;
-  color: #555;
-  z-index: 1000;
-}
-
-    </style>
-</head>
-<body style="background-color:beige;">
-     <div class="navbar">
-    <div class="logo">EMBOCES</div>
-    <div class="menu-icon" onclick="toggleSidebar()">☰</div>
-  </div>
-
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <ul>
-                <li><a href="index.html">Home</a></li>
-      <li><a href="user.php">   Grid 2081 </a></li>
-         <li><a href="contact.html">Contact us</a></li>
-         <li><a href="login.php">admin </a></li>
-    </ul>
-  </div>
 
 
 

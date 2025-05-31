@@ -1,14 +1,7 @@
 <?php
 session_start();
+include "unset_session.php";
 
-// Check if admin is logged in
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    // Redirect to login page if not logged in
-    header("Location: upload_calendar.php");
-    exit();
-}
-
-// If logged in, show the upload calendar page
 ?>
 <!DOCTYPE html>
 <html>

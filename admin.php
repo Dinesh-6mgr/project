@@ -1,20 +1,10 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "dinesh rana magar";
+include "dbconfig.php";
+session_start();
+include "unset_session.php";
 
 
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Delete message if requested
 if (isset($_GET['delete'])) {
